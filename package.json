@@ -1,0 +1,15 @@
+{
+  "name": "@cmtv/processes",
+  "version": "1.0.0",
+  "description": "A handy way to split big process into few smaller controllable processes.",
+  "main": "index.ts",
+  "author": "CMTV",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0"
+  }
+}
