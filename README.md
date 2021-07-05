@@ -59,6 +59,8 @@ Finally, you can create class and run all previously created processes!
 
 ```js
 // build.ts
+
+// Importing processes
 import { Clear, Scripts } from "./processes";
 
 (new Clear).run();

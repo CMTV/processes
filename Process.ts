@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 export abstract class Process
 {
@@ -50,3 +50,15 @@ export abstract class Process
         if (toLog) console.log(toLog, '\n');
     }
 }
+
+class Test extends Process
+{
+    processName() { return 'Looool'; }
+
+    process()
+    {
+
+    }
+}
+
+(new Test).run();
