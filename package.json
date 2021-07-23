@@ -1,8 +1,8 @@
 {
   "name": "@cmtv/processes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A handy way to split big process into few smaller controllable processes.",
-  "main": "index.ts",
+  "main": "index.js",
   "author": "CMTV",
   "license": "MIT",
   "repository": {
