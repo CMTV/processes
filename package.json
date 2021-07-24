@@ -1,6 +1,6 @@
 {
   "name": "@cmtv/processes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A handy way to split big process into few smaller controllable processes.",
   "main": "dist/index.js",
   "author": "CMTV",
@@ -9,11 +9,15 @@
     "type": "git",
     "url": "https://github.com/CMTV/processes"
   },
+  "keywords": [
+    "typescript",
+    "process"
+  ],
   "dependencies": {
-    "chalk": "^4.1.1",
-    "typescript": "^4.3.5"
+    "chalk": "^4.1.1"
   },
   "devDependencies": {
-    "ts-node": "^10.0.0"
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
   }
 }
