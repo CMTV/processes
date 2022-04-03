@@ -1,8 +1,19 @@
 {
     "compilerOptions":
     {
+        "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
-        "declaration": true,
-        "outDir": "dist"
-    }
+
+        "baseUrl": "./",
+        "rootDir": "src",
+        "paths": { "src/*": ["./src/*"] },
+
+        "outDir": "dist",
+        "declaration": true
+    },
+
+    "include": ["src/**/*"],
+
+    "ts-node": { "require": ["tsconfig-paths/register"] },
+    "tsc-alias": { "replacers": { "base-url": { "enabled": false } } }
 }

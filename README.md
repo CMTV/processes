@@ -1,3 +1,7 @@
+# Processes
+
+![Package Logotype](logo.png)
+
 ## Install
 
 ```console
@@ -6,7 +10,8 @@ $ npm i @cmtv/processes
 
 ## About
 
-With this package you can split a big process into smaller ones which are simply subclasses (called 'processes') of an abstract `Process` class.
+With this package you can split a big process into smaller ones which are simply subclasses (called 'processes') of an abstract `SyncProcess` or `AsyncProcesses` classes.
+
 Each process has a name and a method which is executed when process ran.
 When a process done (or aborted with error) you will see informative messages in console.
 
@@ -27,28 +32,31 @@ Every class have to implement `processName()` method where you return the name o
 ```js
 // processes.ts
 
-import { Process } from "@cmtv/processes";
+import { SyncProcess, AsyncProcess } from "@cmtv/processes";
 
-export class Clear extends Process
+export class Clear extends SyncProcess
 {
-    processName() { return `Clearing 'dist' folder`; }
+    name = `Clearing 'dist' folder`;
     process() { /* Do something... */ }
 }
 
-export class Scripts extends Process
+export class Scripts extends AsyncProcess
 {
-    processName() { return 'Building scripts'; }
+    name = () => { return 'Building scripts'; }
     
-    process()
+    async process()
     {
         this.stage = 'TS -> JS';
-        /* Doing stuff... */
-        
-        Process.warning('This will be displayed in console!');
 
+        /* ... Doing stuff ... */
+        
         this.stage = 'Accessing unexisting property';
         (null as any).property;
-        this.clearStage();
+    }
+
+    fail(e)
+    {
+        /* ... Handling error ... */
     }
 }
 

@@ -1,23 +1,26 @@
 {
-  "name": "@cmtv/processes",
-  "version": "1.0.6",
-  "description": "A handy way to split big process into few smaller controllable processes.",
-  "main": "dist/index.js",
-  "author": "CMTV",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CMTV/processes"
-  },
-  "keywords": [
-    "typescript",
-    "process"
-  ],
-  "dependencies": {
-    "chalk": "^4.1.1"
-  },
-  "devDependencies": {
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
-  }
+    "name": "@cmtv/processes",
+    "version": "2.0.0",
+    "description": "A handy way to split big process into few smaller controllable processes.",
+    "keywords": [
+        "process"
+    ],
+    "author": "CMTV",
+    "license": "MIT",
+    "repository": "git://github.com/CMTV/processes.git",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "npm run clear && npx tsc && npx tsc-alias",
+        "clear": "npx rimraf dist"
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.7.0",
+        "tsc-alias": "^1.6.5",
+        "tsconfig-paths": "^3.14.1",
+        "typescript": "^4.6.3"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2"
+    }
 }
